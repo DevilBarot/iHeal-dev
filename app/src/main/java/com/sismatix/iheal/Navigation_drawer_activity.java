@@ -58,7 +58,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
         getSupportActionBar().hide();
         AllocateMemory();
 
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
