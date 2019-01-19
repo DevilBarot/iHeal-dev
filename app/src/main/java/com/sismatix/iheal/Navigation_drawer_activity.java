@@ -117,9 +117,11 @@ public class Navigation_drawer_activity extends AppCompatActivity
 
         disableNavigationViewScrollbars(navigationView);//remove scrollbar
         navigationView.setNavigationItemSelectedListener(this);
-        View header=navigationView.getHeaderView(0);
-       ImageView iv_drawer_cloas = (ImageView)header.findViewById(R.id.iv_drawer_cloas);
-        iv_drawer_cloas.setOnClickListener(new View.OnClickListener() {
+
+        View header = navigationView.getHeaderView(0);
+
+        ImageView iv_drawer_close = (ImageView) header.findViewById(R.id.iv_drawer_close);
+        iv_drawer_close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -363,7 +365,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
 
         } else if (id == R.id.nav_my_account) {
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.rootLayout,new Account());
+            fragmentTransaction.replace(R.id.rootLayout, new Account());
             fragmentTransaction.commit();
         } else if (id == R.id.nav_wishlist) {
 
