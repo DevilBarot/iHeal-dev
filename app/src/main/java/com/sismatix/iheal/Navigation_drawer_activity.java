@@ -22,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import java.util.List;
 
@@ -52,8 +53,9 @@ public class Navigation_drawer_activity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       // this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_navigation_drawer);
-
+        getSupportActionBar().hide();
         AllocateMemory();
 
         //setSupportActionBar(toolbar);
