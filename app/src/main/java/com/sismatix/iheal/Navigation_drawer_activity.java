@@ -22,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.List;
 
@@ -116,6 +117,18 @@ public class Navigation_drawer_activity extends AppCompatActivity
 
         disableNavigationViewScrollbars(navigationView);//remove scrollbar
         navigationView.setNavigationItemSelectedListener(this);
+        View header=navigationView.getHeaderView(0);
+       ImageView iv_drawer_cloas = (ImageView)header.findViewById(R.id.iv_drawer_cloas);
+        iv_drawer_cloas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                } else {
+                }
+            }
+        });
+
 
         Bootom_Navigation_view();
     }
