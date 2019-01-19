@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#36ba86</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="top_header_footer">#36ba86</color>
+    <color name="selected_color">#fee5a7</color>
+    <color name="nav_item_background">#269e6f</color>
+
+    <color name="main">#269e6f</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="signup_bg">#f8f8f8</color>
+    <color name="facebook_color">#4267b2</color>
+
+    <color name="onclick">#ffe5a8</color>
+
+    <!--
+
+    selected color:fee5a7
+    bg color :#269e6f
+    top heder and bouttom logout bg color :#36ba86
+    -->
+</resources>
