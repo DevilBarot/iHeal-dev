@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="24 items"
+                android:text="24 item(s)"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
