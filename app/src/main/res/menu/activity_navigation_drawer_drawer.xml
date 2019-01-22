@@ -21,9 +21,11 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Tools" />
     </group>-->
+
     <item android:title="shop"
         android:id="@+id/title_shop_tools">
         <menu>
+            <group android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_product_categories"
                 android:icon="@drawable/product_cat"
@@ -48,12 +50,14 @@
                 android:icon="@drawable/recipes"
                 android:title="Recipes"
                 />
+            </group>
         </menu>
     </item>
 
     <item android:title="Account"
         android:id="@+id/title_account_tools">
         <menu>
+            <group android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_my_account"
                 android:icon="@drawable/myaccount"
@@ -75,7 +79,9 @@
                 android:icon="@drawable/notification"
                 android:title="Notifications"
                />
+            </group>
         </menu>
     </item>
+
 
 </menu>

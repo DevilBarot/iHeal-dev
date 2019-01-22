@@ -17,6 +17,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,24 +27,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+
 import com.sismatix.iheal.Adapter.Cart_List_Adapter;
 import com.sismatix.iheal.Model.Cart_Model;
 import com.sismatix.iheal.R;
 
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,7 +44,7 @@ public class Cart extends Fragment  {
     private RecyclerView cart_recyclerview;
     private List<Cart_Model> cartList = new ArrayList<Cart_Model>();
     private Cart_List_Adapter cart_adapter;
-
+    Toolbar toolbar;
 
     private static final String URL = "https://api.androidhive.info/json/menu.json";
 
@@ -64,6 +54,7 @@ public class Cart extends Fragment  {
         // Inflate the layout for this fragment
         view=inflater.inflate(R.layout.fragment_cart, container, false);
         AllocateMemory(view);
+
         prepare_Cart();
         init_Swipe_recyclerview();//swiper recyclerview
 
@@ -109,14 +100,15 @@ public class Cart extends Fragment  {
                     float width = height / 3;
 
                     if(dX > 0){
-                        p.setColor(Color.parseColor("#388E3C"));
+                        p.setColor(Color.parseColor("#3f7a5c"));
                         RectF background = new RectF((float) itemView.getLeft(), (float) itemView.getTop(), dX,(float) itemView.getBottom());
                         c.drawRect(background,p);
                         icon = BitmapFactory.decodeResource(getResources(), R.drawable.ic_create_black_18dp);
                         RectF icon_dest = new RectF((float) itemView.getLeft() + width ,(float) itemView.getTop() + width,(float) itemView.getLeft()+ 2*width,(float)itemView.getBottom() - width);
                         c.drawBitmap(icon,null,icon_dest,p);
+
                     } else {
-                        p.setColor(Color.parseColor("#D32F2F"));
+                        p.setColor(Color.parseColor("#f45d64"));
                         RectF background = new RectF((float) itemView.getRight() + dX, (float) itemView.getTop(),(float) itemView.getRight(), (float) itemView.getBottom());
                         c.drawRect(background,p);
                         icon = BitmapFactory.decodeResource(getResources(), R.drawable.ic_close_black_18dp);
@@ -137,6 +129,7 @@ public class Cart extends Fragment  {
     }
     private void AllocateMemory(View v) {
         cart_recyclerview = v.findViewById(R.id.cart_recyclerview);
+        toolbar=(Toolbar)v.findViewById(R.id.toolbar_cart);
         cart_adapter = new Cart_List_Adapter(getActivity(), cartList);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
