@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#36ba86</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#269e6f</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="top_header_footer">#36ba86</color>
+    <color name="top_header_footer">#269e6f</color>
     <color name="selected_color">#fee5a7</color>
     <color name="nav_item_background">#269e6f</color>
 
@@ -16,7 +16,8 @@
     <color name="onclick">#ffe5a8</color>
     <color name="edittext">#707070</color>
     <color name="view">#c8c8c8</color>
-    <color name="trans">#00FFFFFF</color>
+    <color name="delete">#f45d64</color>
+    <color name="edit">#3f7a5c</color>
 
     <!--
 
