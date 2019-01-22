@@ -4,6 +4,7 @@ import android.animation.ArgbEvaluator;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.NavigationMenuView;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -38,14 +39,17 @@ public class Navigation_drawer_activity extends AppCompatActivity
 
     DrawerLayout drawer;
     NavigationView navigationView;
-    Toolbar toolbar;
+
     MenuItem title_account_tools, title_shop_tools;
     SpannableString shop, account;
 
     //bottom navigation
     private ViewPager viewPager;
-    private BottomNavigationView bottom_navigation;
+    public static BottomNavigationView bottom_navigation;
+    public static Toolbar toolbar;
     private List<View> viewList;
+
+    public static AppBarLayout appBarLayout;
 
     /*int navDefaultTextColor = Color.parseColor("#ffe5a8");
     int navDefaultIconColor = Color.parseColor("#ffe5a8");*/
@@ -314,6 +318,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
+        appBarLayout = (AppBarLayout)findViewById(R.id.appbarlayout);
     }
 
     @Override
@@ -340,7 +345,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_cart) {
             return true;
         }
 

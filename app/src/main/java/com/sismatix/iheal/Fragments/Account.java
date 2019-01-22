@@ -12,6 +12,10 @@ import android.widget.TextView;
 
 import com.sismatix.iheal.R;
 
+import static com.sismatix.iheal.Navigation_drawer_activity.appBarLayout;
+import static com.sismatix.iheal.Navigation_drawer_activity.bottom_navigation;
+import static com.sismatix.iheal.Navigation_drawer_activity.toolbar;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,6 +37,10 @@ public class Account extends Fragment {
 
         lv_email_singup = (LinearLayout)v.findViewById(R.id.lv_email_singup);
         tv_login = (TextView)v.findViewById(R.id.tv_login);
+
+        bottom_navigation.setBackgroundColor(getResources().getColor(R.color.main));
+        appBarLayout.setBackgroundColor(getResources().getColor(R.color.main));
+        toolbar.setBackgroundColor(getResources().getColor(R.color.main));
 
         lv_email_singup.setOnClickListener(new View.OnClickListener() {
             @Override

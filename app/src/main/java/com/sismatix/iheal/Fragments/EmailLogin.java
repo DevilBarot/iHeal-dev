@@ -9,10 +9,15 @@ import android.view.ViewGroup;
 
 import com.sismatix.iheal.R;
 
+import static com.sismatix.iheal.Navigation_drawer_activity.appBarLayout;
+import static com.sismatix.iheal.Navigation_drawer_activity.bottom_navigation;
+import static com.sismatix.iheal.Navigation_drawer_activity.toolbar;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class EmailLogin extends Fragment {
+
 
 
     public EmailLogin() {
@@ -23,8 +28,13 @@ public class EmailLogin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_email_login, container, false);
+        View v = inflater.inflate(R.layout.fragment_email_login, container, false);
 
+        bottom_navigation.setBackgroundColor(getResources().getColor(R.color.main));
+        appBarLayout.setBackgroundColor(getResources().getColor(R.color.main));
+        toolbar.setBackgroundColor(getResources().getColor(R.color.main));
+
+        return v;
 
     }
 
